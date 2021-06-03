@@ -15,8 +15,6 @@ namespace YoutubeDLQualityTest
             p.StartInfo.RedirectStandardOutput = true;
             p.Start();
 
-            int x = 0;
-
             List<string> output = new List<string>();
 
             while (!p.StandardOutput.EndOfStream)
@@ -26,11 +24,9 @@ namespace YoutubeDLQualityTest
 
             output.RemoveRange(0, 3);
 
-            foreach (string text in output)
+            for (int x = 0; x < output.Count; x++)
             {
-                Console.WriteLine($"Length is {x}: " + text); 
-                
-                x += 1;
+                Console.WriteLine(output[x]);
             }
 
             Console.ReadLine();
