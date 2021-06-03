@@ -10,7 +10,7 @@ namespace YoutubeDLQualityTest
         {
             Process p = new Process();
             p.StartInfo.FileName = "youtube-dl.exe";
-            p.StartInfo.Arguments = "-F https://www.youtube.com/watch?v=4sRDppM6cj4";
+            p.StartInfo.Arguments = "-F https://www.youtube.com/watch?v=LXb3EKWsInQ";
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.RedirectStandardOutput = true;
             p.Start();
@@ -43,7 +43,7 @@ namespace YoutubeDLQualityTest
             {
                 string temp = output[x];
                 temp = temp.Remove(0, 24);
-                qualResolution.Add(temp.Remove(8));
+                qualResolution.Add(temp.Remove(10));
             }
 
             for (int x = 0; x < output.Count; x++)
